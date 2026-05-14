@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Free Drinking Water in Rome: How to Find Nasoni Fountains</title>
+
+  <meta
+    name="description"
+    content="Learn how to find free drinking water in Rome using nasoni, the city's public fountains. Use Fontanella to locate nearby fountains and open walking directions."
+  />
+
+  <style>
+    :root {
+      --blue: #007aff;
+      --blue-dark: #005fcc;
+      --light-blue: #eaf4ff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --background: #f8fafc;
+      --card: #ffffff;
+      --soft: #f1f7ff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--blue);
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 28px 20px 56px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 44px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 900;
+      font-size: 22px;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      object-fit: cover;
+      box-shadow: 0 10px 24px rgba(0, 122, 255, 0.22);
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--muted);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--muted);
+    }
+
+    nav a:hover {
+      color: var(--blue);
+    }
+
+    .hero {
+      margin-bottom: 42px;
+      padding: 38px;
+      border-radius: 34px;
+      background:
+        radial-gradient(circle at top right, rgba(0, 122, 255, 0.15), transparent 34%),
+        linear-gradient(135deg, #ffffff, #eef7ff);
+      border: 1px solid rgba(0, 122, 255, 0.14);
+      box-shadow: 0 22px 50px rgba(15, 23, 42, 0.08);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--light-blue);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 6vw, 58px);
+      line-height: 1;
+      margin: 0 0 18px;
+      letter-spacing: -0.055em;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 0 26px;
+      color: var(--muted);
+      font-size: 19px;
+    }
+
+    .app-store-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 15px 20px;
+      border-radius: 18px;
+      background: var(--text);
+      color: white;
+      text-decoration: none;
+      font-weight: 900;
+      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.18);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .app-store-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 30px rgba(15, 23, 42, 0.22);
+    }
+
+    .apple-icon {
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    article {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+    }
+
+    section {
+      margin-bottom: 34px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: clamp(24px, 4vw, 34px);
+      line-height: 1.1;
+      margin: 0 0 12px;
+      letter-spacing: -0.035em;
+    }
+
+    h3 {
+      font-size: 19px;
+      margin: 20px 0 8px;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: #334155;
+    }
+
+    ul {
+      margin: 12px 0 0;
+      padding-left: 20px;
+      color: #334155;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .tip-box {
+      margin: 22px 0;
+      padding: 18px;
+      border-radius: 22px;
+      background: var(--soft);
+      border: 1px solid rgba(0, 122, 255, 0.16);
+    }
+
+    .tip-box strong {
+      color: var(--blue-dark);
+    }
+
+    .steps {
+      display: grid;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 38px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 14px;
+      border-radius: 18px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+    }
+
+    .step-number {
+      width: 38px;
+      height: 38px;
+      border-radius: 14px;
+      background: var(--blue);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+    }
+
+    .step strong {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--text);
+    }
+
+    aside {
+      position: sticky;
+      top: 20px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .side-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 20px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+    }
+
+    .side-card h3 {
+      margin-top: 0;
+    }
+
+    .side-card p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .quick-list {
+      padding-left: 18px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .download-card {
+      background: linear-gradient(135deg, #007aff, #48b5ff);
+      color: white;
+      border: none;
+    }
+
+    .download-card p {
+      color: rgba(255,255,255,0.92);
+    }
+
+    .download-card .app-store-button {
+      width: 100%;
+      margin-top: 8px;
+      background: white;
+      color: var(--text);
+      box-shadow: none;
+    }
+
+    .faq-item {
+      border-top: 1px solid var(--border);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+      padding-top: 26px;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--blue);
+    }
+
+    @media (max-width: 840px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 28px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .hero {
+        padding: 26px;
+        border-radius: 28px;
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      article {
+        padding: 24px;
+        border-radius: 24px;
+      }
+
+      aside {
+        position: static;
+      }
+
+      .side-card {
+        padding: 18px;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page {
+        padding: 22px 16px 42px;
+      }
+
+      .hero {
+        padding: 22px;
+        margin-bottom: 28px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      article {
+        padding: 20px;
+      }
+
+      section {
+        margin-bottom: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <a class="brand" href="/">
+        <img
+          class="brand-icon"
+          src="/screenshots/Italy_Fontanella.png"
+          alt="Fontanella app icon"
+        />
+        <span>Fontanella</span>
+      </a>
+
+      <nav>
+        <a href="/">Home</a>
+        <a href="#what-are-nasoni">Nasoni</a>
+        <a href="#how-to-use">How to use</a>
+        <a href="#download">Download</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow">Rome travel tip</div>
+
+        <h1>Free drinking water in Rome: how to find nasoni fountains</h1>
+
+        <p>
+          Rome has thousands of public drinking fountains, often called <strong>nasoni</strong>.
+          They are free, useful in summer, and perfect for refilling your bottle while exploring the city.
+        </p>
+
+        <a
+          class="app-store-button"
+          href="https://apps.apple.com/it/app/fontanella/id6765984657?l=en-GB"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="apple-icon"></span>
+          <span>Download Fontanella</span>
+        </a>
+      </section>
+
+      <div class="content-grid">
+        <article>
+          <section id="what-are-nasoni">
+            <h2>What are nasoni?</h2>
+
+            <p>
+              <strong>Nasoni</strong> are Rome’s public drinking fountains. The word comes from
+              the fountain’s curved metal spout, which looks a little like a large nose.
+            </p>
+
+            <p>
+              You can find them on streets, near squares, close to parks, and around many popular
+              walking routes. They are one of the simplest ways to refill a bottle while visiting Rome.
+            </p>
+
+            <div class="tip-box">
+              <strong>Quick tip:</strong> If water is constantly flowing from a public fountain in Rome,
+              it is usually meant for drinking unless there is a sign saying otherwise.
+            </div>
+          </section>
+
+          <section>
+            <h2>Why tourists use them</h2>
+
+            <p>
+              Rome can get very hot, especially in late spring and summer. Buying bottled water again
+              and again can be annoying, expensive, and wasteful.
+            </p>
+
+            <p>
+              Nasoni are useful because they let you:
+            </p>
+
+            <ul>
+              <li>refill your bottle for free</li>
+              <li>stay hydrated while walking around Rome</li>
+              <li>avoid carrying too much water at once</li>
+              <li>reduce single-use plastic bottles</li>
+              <li>find water near tourist areas, parks, and local streets</li>
+            </ul>
+          </section>
+
+          <section id="how-to-use">
+            <h2>How to refill your bottle</h2>
+
+            <p>
+              Most nasoni are simple to use. Place your bottle under the spout and fill it directly.
+              Some fountains also let you block the main spout with a finger so water comes out from
+              a small hole on top, making it easier to drink from.
+            </p>
+
+            <div class="steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div>
+                  <strong>Find a nearby fountain</strong>
+                  Look for a public fountain on the street, or use Fontanella to find one on the map.
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">2</div>
+                <div>
+                  <strong>Check for signs</strong>
+                  If there is a sign saying the water is not drinkable, do not drink from it.
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">3</div>
+                <div>
+                  <strong>Refill and keep walking</strong>
+                  Fill your bottle and continue exploring Rome without buying another plastic bottle.
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>How Fontanella helps</h2>
+
+            <p>
+              Fontanella is a simple app for finding public drinking fountains nearby. It shows fountain
+              locations on a map, estimates walking distance, and opens directions in Apple Maps or Google Maps.
+            </p>
+
+            <p>
+              It is useful when you are walking around Rome and want the closest refill point without searching
+              manually or guessing where the next fountain is.
+            </p>
+
+            <ul>
+              <li>find fountains near your current location</li>
+              <li>see distance and estimated walking time</li>
+              <li>open walking navigation</li>
+              <li>save useful fountains</li>
+              <li>browse supported Italian cities</li>
+              <li>report whether a fountain was found or missing when you are close enough</li>
+            </ul>
+          </section>
+
+          <section id="download">
+            <h2>Download Fontanella</h2>
+
+            <p>
+              If you are visiting Rome, Fontanella can help you find free drinking water faster while
+              walking around the city.
+            </p>
+
+            <a
+              class="app-store-button"
+              href="https://apps.apple.com/it/app/fontanella/id6765984657?l=en-GB"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="apple-icon"></span>
+              <span>Download on the App Store</span>
+            </a>
+          </section>
+
+          <section>
+            <h2>Frequently asked questions</h2>
+
+            <div class="faq-item">
+              <h3>Is fountain water in Rome free?</h3>
+              <p>
+                Yes, public drinking fountains in Rome are free to use.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Are nasoni only in Rome?</h3>
+              <p>
+                The word “nasoni” is strongly associated with Rome. Other Italian cities also have
+                public drinking fountains, but they may use different local names.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Does Fontanella work outside Rome?</h3>
+              <p>
+                Yes. Fontanella currently supports Roma, Milano, Torino, Napoli, and Firenze.
+              </p>
+            </div>
+          </section>
+        </article>
+
+        <aside>
+          <div class="side-card">
+            <h3>Good to know</h3>
+            <ul class="quick-list">
+              <li>Nasoni are public fountains in Rome.</li>
+              <li>They are commonly used to refill bottles.</li>
+              <li>They are especially useful during summer walks.</li>
+              <li>Fontanella helps you find the closest one.</li>
+            </ul>
+          </div>
+
+          <div class="side-card download-card">
+            <h3>Find water nearby</h3>
+            <p>
+              Use Fontanella to locate nearby public fountains and open walking directions.
+            </p>
+
+            <a
+              class="app-store-button"
+              href="https://apps.apple.com/it/app/fontanella/id6765984657?l=en-GB"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="apple-icon"></span>
+              <span>Download</span>
+            </a>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <div>
+        © 2026 Fontanella
+      </div>
+
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/support.html">Support</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
