@@ -224,13 +224,83 @@
       overflow: hidden;
     }
 
-    .project-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 20px;
-      display: block;
-    }
+    .project-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.slider-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.slider-track img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text);
+  font-size: 24px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.14);
+}
+
+.slider-btn-left {
+  left: 10px;
+}
+
+.slider-btn-right {
+  right: 10px;
+}
+
+.slider-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  gap: 7px;
+  padding: 7px 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+}
+
+.slider-dot {
+  width: 7px;
+  height: 7px;
+  border: none;
+  border-radius: 999px;
+  background: #94a3b8;
+  cursor: pointer;
+  padding: 0;
+}
+
+.slider-dot.active {
+  width: 18px;
+  background: var(--blue);
+}
 
     .project-content h3 {
       font-size: clamp(28px, 4vw, 40px);
@@ -448,7 +518,27 @@
 
         <div class="project-card">
           <div class="project-image">
-             <img src="/screenshots/map.png" alt="Fontanella app screenshot">
+             <div class="project-slider" aria-label="Fontanella screenshots">
+    <button class="slider-btn slider-btn-left" type="button" onclick="moveSlide(-1)" aria-label="Previous screenshot">
+      ‹
+    </button>
+
+    <div class="slider-track" id="fontanellaSlider">
+      <img src="/screenshots/map.png" alt="Fontanella map screen">
+      <img src="/screenshots/map2.png" alt="Fontanella selected fountain screen">
+      <img src="/screenshots/map3.png" alt="Fontanella city browsing screen">
+    </div>
+
+    <button class="slider-btn slider-btn-right" type="button" onclick="moveSlide(1)" aria-label="Next screenshot">
+      ›
+    </button>
+
+    <div class="slider-dots">
+      <button class="slider-dot active" type="button" onclick="goToSlide(0)" aria-label="Show screenshot 1"></button>
+      <button class="slider-dot" type="button" onclick="goToSlide(1)" aria-label="Show screenshot 2"></button>
+      <button class="slider-dot" type="button" onclick="goToSlide(2)" aria-label="Show screenshot 3"></button>
+    </div>
+  </div>
           </div>
 
           <div class="project-content">
@@ -475,7 +565,7 @@
               </a>
 
               <a class="button button-secondary" href="/" target="_blank" rel="noopener noreferrer">
-                App website
+                product site
               </a>
 
               <a class="button button-secondary" href="/project-fontanella.html">
@@ -511,5 +601,32 @@
       </div>
     </footer>
   </div>
+  <script>
+  let currentSlide = 0;
+  const totalSlides = 3;
+
+  function updateSlider() {
+    const slider = document.getElementById("fontanellaSlider");
+    const dots = document.querySelectorAll(".slider-dot");
+
+    if (!slider) return;
+
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+    dots.forEach((dot, index) => {
+      dot.classList.toggle("active", index === currentSlide);
+    });
+  }
+
+  function moveSlide(direction) {
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    updateSlider();
+  }
+
+  function goToSlide(index) {
+    currentSlide = index;
+    updateSlider();
+  }
+</script>
 </body>
 </html>
