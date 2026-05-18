@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Portfolio of Enes Ozdemir, an undergraduate student building mobile apps and practical digital products."
+    content="Portfolio of Enes Ozdemir, an undergraduate student in Applied Computer Science and Artificial Intelligence at Sapienza University."
   />
 
   <style>
@@ -190,7 +190,7 @@
 
     .section-intro {
       color: var(--muted);
-      max-width: 620px;
+      max-width: 640px;
       margin: 0 0 24px;
       font-size: 16px;
     }
@@ -225,82 +225,82 @@
     }
 
     .project-slider {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 300px;
-  overflow: hidden;
-  border-radius: 20px;
-}
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      overflow: hidden;
+      border-radius: 20px;
+    }
 
-.slider-track {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.3s ease;
-}
+    .slider-track {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.3s ease;
+    }
 
-.slider-track img {
-  flex: 0 0 100%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+    .slider-track img {
+      flex: 0 0 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  width: 34px;
-  height: 34px;
-  border: none;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.92);
-  color: var(--text);
-  font-size: 24px;
-  font-weight: 900;
-  cursor: pointer;
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.14);
-}
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      width: 34px;
+      height: 34px;
+      border: none;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--text);
+      font-size: 24px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.14);
+    }
 
-.slider-btn-left {
-  left: 10px;
-}
+    .slider-btn-left {
+      left: 10px;
+    }
 
-.slider-btn-right {
-  right: 10px;
-}
+    .slider-btn-right {
+      right: 10px;
+    }
 
-.slider-dots {
-  position: absolute;
-  left: 50%;
-  bottom: 12px;
-  transform: translateX(-50%);
-  z-index: 2;
-  display: flex;
-  gap: 7px;
-  padding: 7px 9px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.86);
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
-}
+    .slider-dots {
+      position: absolute;
+      left: 50%;
+      bottom: 12px;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      gap: 7px;
+      padding: 7px 9px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.86);
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+    }
 
-.slider-dot {
-  width: 7px;
-  height: 7px;
-  border: none;
-  border-radius: 999px;
-  background: #94a3b8;
-  cursor: pointer;
-  padding: 0;
-}
+    .slider-dot {
+      width: 7px;
+      height: 7px;
+      border: none;
+      border-radius: 999px;
+      background: #94a3b8;
+      cursor: pointer;
+      padding: 0;
+    }
 
-.slider-dot.active {
-  width: 18px;
-  background: var(--blue);
-}
+    .slider-dot.active {
+      width: 18px;
+      background: var(--blue);
+    }
 
     .project-content h3 {
       font-size: clamp(28px, 4vw, 40px);
@@ -335,6 +335,75 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+    }
+
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .skill-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.04);
+    }
+
+    .skill-card h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+      letter-spacing: -0.025em;
+    }
+
+    .skill-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .explore-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .explore-item {
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 16px;
+      align-items: start;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.04);
+    }
+
+    .explore-number {
+      width: 44px;
+      height: 44px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-weight: 950;
+      font-size: 14px;
+    }
+
+    .explore-item h3 {
+      margin: 0 0 6px;
+      font-size: 18px;
+      letter-spacing: -0.025em;
+    }
+
+    .explore-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
     }
 
     .contact-card {
@@ -385,21 +454,6 @@
       gap: 18px;
     }
 
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .footer-links a {
-      text-decoration: none;
-      color: var(--muted);
-    }
-
-    .footer-links a:hover {
-      color: var(--blue);
-    }
-
     @media (max-width: 800px) {
       header {
         margin-bottom: 62px;
@@ -422,6 +476,10 @@
 
       .project-image {
         min-height: 240px;
+      }
+
+      .skill-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       footer {
@@ -466,6 +524,19 @@
         border-radius: 20px;
       }
 
+      .project-slider {
+        min-height: 210px;
+      }
+
+      .skill-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .explore-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
       .contact-card {
         padding: 26px;
         border-radius: 24px;
@@ -484,6 +555,8 @@
 
       <nav>
         <a href="#project">Project</a>
+        <a href="#skills">Skills</a>
+        <a href="#exploring">Now</a>
         <a href="#contact">Contact</a>
         <a href="https://github.com/Enesozd1" target="_blank" rel="noopener noreferrer">GitHub</a>
       </nav>
@@ -491,12 +564,12 @@
 
     <main>
       <section class="hero">
-        <div class="eyebrow">Applied Computer Science & AI student</div>
+        <div class="eyebrow">ACSAI student at Sapienza University</div>
 
-        <h1>Hi, I’m Enes. I build real projects while studying AI and computer science.</h1>
+        <h1>Computer Science & AI Student at Sapienza University</h1>
 
         <p class="hero-text">
-           I study Applied Computer Science and Artificial Intelligence at Sapienza University. My main project so far is Fontanella, a published iOS app, and I’m now working toward more AI/ML-focused projects and internship opportunities.
+          I build real-world software while studying how intelligent systems work.
         </p>
 
         <div class="actions">
@@ -512,33 +585,33 @@
         <h2>Fontanella</h2>
 
         <p class="section-intro">
-          My first published iOS app, built to help people find free public drinking fountains
-          while walking through Italian cities.
+          My first published iOS app. It is not an AI project, but it shows my ability to build,
+          ship, and maintain a real product from idea to App Store release.
         </p>
 
         <div class="project-card">
           <div class="project-image">
-             <div class="project-slider" aria-label="Fontanella screenshots">
-    <button class="slider-btn slider-btn-left" type="button" onclick="moveSlide(-1)" aria-label="Previous screenshot">
-      ‹
-    </button>
+            <div class="project-slider" aria-label="Fontanella screenshots">
+              <button class="slider-btn slider-btn-left" type="button" onclick="moveSlide(-1)" aria-label="Previous screenshot">
+                ‹
+              </button>
 
-    <div class="slider-track" id="fontanellaSlider">
-      <img src="/screenshots/map.png" alt="Fontanella map screen">
-      <img src="/screenshots/map2.png" alt="Fontanella selected fountain screen">
-      <img src="/screenshots/map3.png" alt="Fontanella city browsing screen">
-    </div>
+              <div class="slider-track" id="fontanellaSlider">
+                <img src="/screenshots/map.png" alt="Fontanella map screen">
+                <img src="/screenshots/map2.png" alt="Fontanella selected fountain screen">
+                <img src="/screenshots/map3.png" alt="Fontanella city browsing screen">
+              </div>
 
-    <button class="slider-btn slider-btn-right" type="button" onclick="moveSlide(1)" aria-label="Next screenshot">
-      ›
-    </button>
+              <button class="slider-btn slider-btn-right" type="button" onclick="moveSlide(1)" aria-label="Next screenshot">
+                ›
+              </button>
 
-    <div class="slider-dots">
-      <button class="slider-dot active" type="button" onclick="goToSlide(0)" aria-label="Show screenshot 1"></button>
-      <button class="slider-dot" type="button" onclick="goToSlide(1)" aria-label="Show screenshot 2"></button>
-      <button class="slider-dot" type="button" onclick="goToSlide(2)" aria-label="Show screenshot 3"></button>
-    </div>
-  </div>
+              <div class="slider-dots">
+                <button class="slider-dot active" type="button" onclick="goToSlide(0)" aria-label="Show screenshot 1"></button>
+                <button class="slider-dot" type="button" onclick="goToSlide(1)" aria-label="Show screenshot 2"></button>
+                <button class="slider-dot" type="button" onclick="goToSlide(2)" aria-label="Show screenshot 3"></button>
+              </div>
+            </div>
           </div>
 
           <div class="project-content">
@@ -565,7 +638,7 @@
               </a>
 
               <a class="button button-secondary" href="/" target="_blank" rel="noopener noreferrer">
-                product site
+                Product site
               </a>
 
               <a class="button button-secondary" href="/project-fontanella.html">
@@ -576,11 +649,89 @@
         </div>
       </section>
 
+      <section id="skills" class="section">
+        <div class="section-label">Skills</div>
+
+        <h2>Tools and areas I’ve worked with.</h2>
+
+        <p class="section-intro">
+          A compact overview of the technologies and product skills I used while building and publishing Fontanella.
+        </p>
+
+        <div class="skill-grid">
+          <div class="skill-card">
+            <h3>React Native & Expo</h3>
+            <p>Built the mobile app interface, navigation flow, location-based screens, and production builds.</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>TypeScript</h3>
+            <p>Used typed structures for fountains, cities, selected locations, and app state.</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Maps & Geolocation</h3>
+            <p>Implemented user location, nearby fountain search, map markers, city detection, and walking navigation.</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Data Cleaning</h3>
+            <p>Collected, converted, filtered, and normalized fountain datasets for multiple Italian cities.</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Firebase</h3>
+            <p>Used anonymous feedback reports for found/missing fountain status and basic report control.</p>
+          </div>
+
+          <div class="skill-card">
+            <h3>App Store Release</h3>
+            <p>Handled App Store Connect, screenshots, privacy details, review feedback, and publishing updates.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="exploring" class="section">
+        <div class="section-label">Exploring now</div>
+
+        <h2>AI/ML topics I’m currently studying.</h2>
+
+        <p class="section-intro">
+          Alongside app development, I’m moving toward AI and machine learning topics that I want to explore more deeply in future projects.
+        </p>
+
+        <div class="explore-list">
+          <div class="explore-item">
+            <span class="explore-number">01</span>
+            <div>
+              <h3>Change detection</h3>
+              <p>Studying how models identify meaningful differences between images, scenes, or data over time.</p>
+            </div>
+          </div>
+
+          <div class="explore-item">
+            <span class="explore-number">02</span>
+            <div>
+              <h3>Saliency detection in computer vision</h3>
+              <p>Exploring how visual systems highlight the most important or attention-grabbing parts of an image.</p>
+            </div>
+          </div>
+
+          <div class="explore-item">
+            <span class="explore-number">03</span>
+            <div>
+              <h3>NLP ontology</h3>
+              <p>Learning how structured knowledge, concepts, and relationships can support language understanding.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" class="section contact-card">
         <h2>Contact</h2>
 
         <p>
-           I’m open to feedback, experience opportunities, and project ideas.
+          I’m open to feedback, experience opportunities, AI/ML-focused internships, and project ideas.
         </p>
 
         <div class="contact-links">
@@ -593,40 +744,35 @@
 
     <footer>
       <div>© 2026 Enes Ozdemir</div>
-
-      <div class="footer-links">
-        <a href="/">Fontanella</a>
-        <a href="/free-water-rome.html">Rome water guide</a>
-        <a href="https://apps.apple.com/it/app/fontanella/id6765984657?l=en-GB" target="_blank" rel="noopener noreferrer">App Store</a>
-      </div>
     </footer>
   </div>
+
   <script>
-  let currentSlide = 0;
-  const totalSlides = 3;
+    let currentSlide = 0;
+    const totalSlides = 3;
 
-  function updateSlider() {
-    const slider = document.getElementById("fontanellaSlider");
-    const dots = document.querySelectorAll(".slider-dot");
+    function updateSlider() {
+      const slider = document.getElementById("fontanellaSlider");
+      const dots = document.querySelectorAll(".slider-dot");
 
-    if (!slider) return;
+      if (!slider) return;
 
-    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+      slider.style.transform = `translateX(-${currentSlide * 100}%)`;
 
-    dots.forEach((dot, index) => {
-      dot.classList.toggle("active", index === currentSlide);
-    });
-  }
+      dots.forEach((dot, index) => {
+        dot.classList.toggle("active", index === currentSlide);
+      });
+    }
 
-  function moveSlide(direction) {
-    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-    updateSlider();
-  }
+    function moveSlide(direction) {
+      currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+      updateSlider();
+    }
 
-  function goToSlide(index) {
-    currentSlide = index;
-    updateSlider();
-  }
-</script>
+    function goToSlide(index) {
+      currentSlide = index;
+      updateSlider();
+    }
+  </script>
 </body>
 </html>
