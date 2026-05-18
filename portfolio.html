@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Enes Ozdemir - Portfolio</title>
+
+  <meta
+    name="description"
+    content="Portfolio of Enes Ozdemir, undergraduate student building mobile apps and practical digital products."
+  />
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --blue: #007aff;
+      --blue-soft: #eaf4ff;
+      --dark: #020617;
+      --shadow: 0 18px 44px rgba(15, 23, 42, 0.08);
+      --radius: 28px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(0, 122, 255, 0.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(124, 58, 237, 0.08), transparent 24%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 20px 56px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 72px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      font-size: 20px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 15px;
+      background: linear-gradient(135deg, #007aff, #56b8ff);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 950;
+      box-shadow: 0 12px 26px rgba(0, 122, 255, 0.22);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--muted);
+    }
+
+    nav a {
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--blue);
+    }
+
+    .nav-pill {
+      padding: 9px 13px;
+      border-radius: 999px;
+      background: white;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 36px;
+      align-items: center;
+      margin-bottom: 74px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 0.96;
+      letter-spacing: -0.065em;
+      margin: 0 0 22px;
+    }
+
+    .hero-text {
+      font-size: 19px;
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 0 30px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 14px 18px;
+      border-radius: 16px;
+      text-decoration: none;
+      font-weight: 900;
+      border: 1px solid transparent;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background: var(--dark);
+      color: white;
+      box-shadow: 0 14px 28px rgba(15, 23, 42, 0.18);
+    }
+
+    .button-secondary {
+      background: white;
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    .hero-card {
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.92), rgba(234,244,255,0.88));
+      border: 1px solid rgba(0, 122, 255, 0.14);
+      border-radius: 36px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: rgba(0, 122, 255, 0.12);
+      right: -80px;
+      top: -90px;
+    }
+
+    .profile-block {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 18px;
+    }
+
+    .profile-avatar {
+      width: 86px;
+      height: 86px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, #007aff, #7c3aed);
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 32px;
+      font-weight: 950;
+      box-shadow: 0 14px 34px rgba(0, 122, 255, 0.24);
+    }
+
+    .profile-card-title {
+      margin: 0;
+      font-size: 24px;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+    }
+
+    .profile-card-text {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .mini-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .mini-stat {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 14px;
+    }
+
+    .mini-stat strong {
+      display: block;
+      font-size: 20px;
+      letter-spacing: -0.04em;
+    }
+
+    .mini-stat span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      margin-top: 2px;
+    }
+
+    .section {
+      margin-bottom: 70px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .section-kicker {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: clamp(30px, 5vw, 46px);
+      line-height: 1.05;
+      letter-spacing: -0.05em;
+      margin: 0;
+    }
+
+    .section-subtitle {
+      max-width: 520px;
+      color: var(--muted);
+      margin: 8px 0 0;
+      font-size: 16px;
+    }
+
+    .project-card {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 26px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 34px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .project-visual {
+      min-height: 360px;
+      border-radius: 26px;
+      background:
+        radial-gradient(circle at top right, rgba(0, 122, 255, 0.2), transparent 30%),
+        linear-gradient(145deg, #eaf4ff, #ffffff);
+      border: 1px solid rgba(0, 122, 255, 0.16);
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      text-align: center;
+      font-weight: 900;
+      padding: 24px;
+    }
+    .project-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+  display: block;
+}
+
+    .project-content {
+      padding: 8px 6px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .project-label {
+      display: inline-flex;
+      align-self: flex-start;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 950;
+      margin-bottom: 14px;
+    }
+
+    .project-content h3 {
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.04;
+      letter-spacing: -0.05em;
+      margin: 0 0 12px;
+    }
+
+    .project-content p {
+      color: var(--muted);
+      margin: 0 0 18px;
+      font-size: 16px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 2px 0 22px;
+    }
+
+    .tag {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: #f1f5f9;
+      color: #334155;
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .info-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.05);
+    }
+
+    .info-card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      letter-spacing: -0.025em;
+    }
+
+    .info-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 16px;
+      background: var(--blue-soft);
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      padding: 10px 13px;
+      border-radius: 999px;
+      background: white;
+      border: 1px solid var(--border);
+      color: #334155;
+      font-size: 14px;
+      font-weight: 850;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+    }
+
+    .contact {
+      background: linear-gradient(135deg, #007aff, #48b5ff);
+      color: white;
+      border-radius: 34px;
+      padding: 34px;
+      box-shadow: 0 20px 50px rgba(0, 122, 255, 0.22);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .contact h2 {
+      margin-bottom: 10px;
+    }
+
+    .contact p {
+      color: rgba(255,255,255,0.9);
+      margin: 0;
+      max-width: 620px;
+    }
+
+    .contact .button {
+      background: white;
+      color: var(--text);
+      white-space: nowrap;
+      box-shadow: none;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: var(--muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--blue);
+    }
+
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 48px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 26px;
+      }
+
+      .hero-card {
+        max-width: 520px;
+      }
+
+      .section-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .project-card {
+        grid-template-columns: 1fr;
+      }
+
+      .project-visual {
+        min-height: 300px;
+      }
+
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .contact {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .page {
+        padding: 22px 16px 42px;
+      }
+
+      .hero {
+        margin-bottom: 54px;
+      }
+
+      .hero-text {
+        font-size: 17px;
+      }
+
+      .actions {
+        align-items: stretch;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .hero-card {
+        border-radius: 28px;
+        padding: 20px;
+      }
+
+      .mini-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        margin-bottom: 50px;
+      }
+
+      .project-card {
+        padding: 16px;
+        border-radius: 28px;
+      }
+
+      .project-visual {
+        min-height: 230px;
+        border-radius: 22px;
+      }
+
+      .info-card {
+        padding: 18px;
+        border-radius: 22px;
+      }
+
+      .contact {
+        padding: 26px;
+        border-radius: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <a class="brand" href="/portfolio.html">
+        <div class="brand-mark">E</div>
+        <span>Enes Ozdemir</span>
+      </a>
+
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#learning">Now</a>
+        <a class="nav-pill" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Undergraduate developer · Mobile apps</div>
+
+          <h1>Building practical apps from real-world problems.</h1>
+
+          <p class="hero-text">
+            I’m an undergraduate student interested in mobile development, product design,
+            maps, public data, and simple tools that people can actually use.
+          </p>
+
+          <div class="actions">
+            <a class="button button-primary" href="#projects">
+              View projects
+            </a>
+
+            <a class="button button-secondary" href="mailto:enesacademic@gmail.com">
+              Email me
+            </a>
+
+            <a class="button button-secondary" href="https://github.com/Enesozd1" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="profile-block">
+            <div class="profile-avatar">EO</div>
+
+            <div>
+              <h2 class="profile-card-title">Student developer focused on shipping real products.</h2>
+              <p class="profile-card-text">
+                Placeholder: short personal summary about your studies, interests,
+                and the kind of internships/projects you are looking for.
+              </p>
+            </div>
+
+            <div class="mini-stats">
+              <div class="mini-stat">
+                <strong>1</strong>
+                <span>App Store app</span>
+              </div>
+
+              <div class="mini-stat">
+                <strong>5</strong>
+                <span>Supported cities</span>
+              </div>
+
+              <div class="mini-stat">
+                <strong>React Native</strong>
+                <span>Main stack</span>
+              </div>
+
+              <div class="mini-stat">
+                <strong>Rome</strong>
+                <span>Based / studying</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Featured project</div>
+            <h2>Shipped, not just built.</h2>
+            <p class="section-subtitle">
+              My strongest project so far is Fontanella, a real iOS app published on the App Store.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-visual">
+            <img src="/screenshots/map.png" alt="Fontanella app screenshot" />
+          </div>
+
+          <div class="project-content">
+            <span class="project-label">Published iOS app</span>
+
+            <h3>Fontanella</h3>
+
+            <p>
+              Fontanella helps users find nearby public drinking fountains in Italian cities,
+              open walking directions, save favorites, and report missing/found fountains.
+            </p>
+
+            <div class="tags">
+              <span class="tag">React Native</span>
+              <span class="tag">Expo</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Maps</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">App Store</span>
+            </div>
+
+            <div class="project-links">
+              <a class="button button-primary" href="/" target="_blank" rel="noopener noreferrer">
+                Visit app site
+              </a>
+
+              <a class="button button-secondary" href="/project-fontanella.html">
+                Case study
+              </a>
+
+              <a class="button button-secondary" href="https://apps.apple.com/it/app/fontanella/id6765984657?l=en-GB" target="_blank" rel="noopener noreferrer">
+                App Store
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Skills</div>
+            <h2>Tools I’ve worked with.</h2>
+            <p class="section-subtitle">
+              Placeholder: adjust this list based on what you want to show recruiters.
+            </p>
+          </div>
+        </div>
+
+        <div class="skills">
+          <span class="skill">React Native</span>
+          <span class="skill">Expo</span>
+          <span class="skill">TypeScript</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">Firebase</span>
+          <span class="skill">Google AdMob</span>
+          <span class="skill">App Store Connect</span>
+          <span class="skill">GitHub Pages</span>
+          <span class="skill">Maps & geolocation</span>
+          <span class="skill">Data cleaning</span>
+          <span class="skill">UI polish</span>
+          <span class="skill">Product thinking</span>
+        </div>
+      </section>
+
+      <section id="learning" class="section">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Currently</div>
+            <h2>What I’m building and learning.</h2>
+            <p class="section-subtitle">
+              Use this section to show momentum, even before you have many finished projects.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="info-card">
+            <div class="icon">📱</div>
+            <h3>Mobile apps</h3>
+            <p>
+              Placeholder: improving Fontanella and planning more practical mobile projects after exams.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <div class="icon">🗺️</div>
+            <h3>Location-based UX</h3>
+            <p>
+              Placeholder: interested in maps, city data, navigation, and turning public datasets into useful tools.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <div class="icon">⚙️</div>
+            <h3>Product shipping</h3>
+            <p>
+              Placeholder: learning the full process from idea to release, including App Store review and privacy setup.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">About</div>
+            <h2>A little more context.</h2>
+            <p class="section-subtitle">
+              Keep this honest and short. A human paragraph is better than a giant formal bio.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="info-card">
+            <h3>Background</h3>
+            <p>
+              Placeholder: I’m an undergraduate student based in Rome, currently studying and building projects.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3>Interests</h3>
+            <p>
+              Placeholder: mobile development, useful apps, maps, travel tools, clean UI, and real-world data.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3>Looking for</h3>
+            <p>
+              Placeholder: internships, junior opportunities, collaborations, or feedback on my projects.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div>
+          <h2>Let’s connect.</h2>
+          <p>
+            Placeholder: I’m open to internship opportunities, project feedback,
+            and conversations about mobile development.
+          </p>
+        </div>
+
+        <a class="button" href="mailto:enesacademic@gmail.com">
+          Email me
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        © 2026 Enes Ozdemir
+      </div>
+
+      <div class="footer-links">
+        <a href="/">Fontanella</a>
+        <a href="/free-water-rome.html">Rome water guide</a>
+        <a href="https://github.com/Enesozd1" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="www.linkedin.com/in/enes-ozdemir-61b074362" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
